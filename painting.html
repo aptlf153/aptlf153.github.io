@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/painting.css">
+    <title>Document</title>
+</head>
+<body>
+  
+    <div class="ctl">
+        <p>선 크기 : <input type="number" class="linewidth" onkeyup="linesize()" value="5"><p>
+        <ul class="linecolor">
+            <li class="color"></li>
+            <li class="color"></li>
+            <li class="color"></li>
+            <li class="color"></li>
+            <li class="color"></li>
+            <li class="color"></li>
+            <li class="color"></li>
+            <li class="color"></li>
+            <li class="color"></li>
+            <li class="color"></li>
+            <li class="color"></li>
+            <li class="color"></li>
+            <li class="color"></li>
+            <li class="color"></li>
+            <li class="color"></li>
+            <li class="color"></li>
+            <li class="color"></li>
+            <li class="color"></li>
+            <li class="color"></li>
+            <li class="color"></li>
+        </ul>
+        <button class="colorRandem" onclick="colorcanglee()">색상 랜덤 돌리기</button>
+           
+            <ul class="optionctl">
+                <li class="opbtn stokeSL">／</li>
+                <li class="opbtn squareSL">■</li>
+                <li class="opbtn circleSL">●</li>
+                <li class="opbtn triSL">▲</li>
+                <li class="opbtn back">이전</li>
+                <li class="opbtn front">앞으로</li>
+            </ul>
+
+        </div>
+    </div>
+    <canvas class="canvas" width="2000px" height="1300px"></canvas>
+</body>
+<script src="script/painting.js"></script>
+</html>
