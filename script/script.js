@@ -52,6 +52,80 @@ function scrolltotop(){
 //스크롤시 애니메이션
 
 var animation = document.querySelector('.animation');
-var aniheight = animation.offsetHeight;
+var career = document.querySelector('.career');
+var PORTFOLIO = document.querySelector('.PORTFOLIO');
 
-console.log(animation.offsetHeight);
+var aniheight = animation.offsetHeight;
+var careerheight = career.offsetHeight;
+var endheight = PORTFOLIO.offsetHeight+careerheight+aniheight;
+
+var navbarlist = document.querySelectorAll('.navbar_list');
+
+navbarlist[0].addEventListener('click',function(){
+    scrolltotop();
+});
+
+navbarlist[1].addEventListener('click',function(){
+    scrollpos = window.pageYOffset,doc.scrollTop,doc.offsetTop;
+
+        const carrertop = setInterval(() => {           
+               
+            if(scrollpos < aniheight){
+                    window.scrollBy(0,100); 
+                }else{
+                    clearInterval(carrertop);
+                }
+
+        }, 15);             
+        
+        const carrerbutton = setInterval(() => {           
+               
+            if(scrollpos > aniheight){
+                    window.scrollBy(0,-100); 
+                }else{
+                    clearInterval(carrerbutton);
+                }
+
+        }, 15);   
+        
+});
+
+
+navbarlist[2].addEventListener('click',function(){
+    scrollpos = window.pageYOffset,doc.scrollTop,doc.offsetTop;
+
+        const carrertop = setInterval(() => {           
+               
+            if(scrollpos < aniheight+careerheight){
+                    window.scrollBy(0,100); 
+                }else{
+                    clearInterval(carrertop);
+                }
+
+        }, 15);             
+        
+        const carrerbutton = setInterval(() => {           
+               
+            if(scrollpos > aniheight+careerheight){
+                    window.scrollBy(0,-100); 
+                }else{
+                    clearInterval(carrerbutton);
+                }
+
+        }, 15);   
+        
+});
+
+navbarlist[3].addEventListener('click',function(){
+    scrollpos = window.pageYOffset,doc.scrollTop,doc.offsetTop;
+
+        const carrertop = setInterval(() => {     
+
+            if(scrollpos < endheight){             
+                window.scrollBy(0,100);
+                }else{
+                    clearInterval(carrertop);
+                }
+        }, 15);             
+
+});

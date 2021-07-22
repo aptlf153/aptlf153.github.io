@@ -21,7 +21,7 @@ var standardcolor = 'black';
 
 // 기본값
 var options = {
-    type:'stroke',
+    type:'triangle',
     color:standardcolor,
    linewidthsA:5,
 };

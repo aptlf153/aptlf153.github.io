@@ -17,12 +17,12 @@ li{list-style: none;}
 
 .backtotop{
     opacity: 0;
-    width: 3vw;
-    height: 3vw;
+    width: 3rem;
+    height: 3rem;
     background-color: #353535;
     position: fixed;
-    right: 4vw;
-    bottom: 2vw;
+    right: 4rem;
+    bottom: 2rem;
     z-index: 9000;
     border-radius: 30%;
     display: flex;
@@ -30,7 +30,7 @@ li{list-style: none;}
     justify-content: center;
     color: white;
     font-weight: bold;
-    font-size: 1vw;
+    font-size: 1rem;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -45,21 +45,22 @@ top: 0;
 background-color: white;
 position: fixed;
 z-index: 9999;
-width: 100vw;
-height: 5vw;
-box-shadow: 0 0.1vw 0 0 gray;
+width: 100%;
+height: 5rem;
+box-shadow: 0 0.1px 0 0 gray;
 display: flex;
 justify-content: center;
 align-items: center;
+opacity: .8;
 }
 
 .navbar_menu{
     display: flex;
-    width: 80vw;
+    width: 80%;
     justify-content: space-around;
 }
 
-.navbar_list{font-size: 2vw;
+.navbar_list{font-size: 2rem;
             list-style:none;
             white-space: nowrap;
             color: var(--main-font-color);
@@ -85,52 +86,52 @@ align-items: center;
     width: 100%;
 }
 
-.animation{width: 100vw;
+.animation{width: 100%;
 background:  linear-gradient(180deg,#c0f0ff,#e3efff);
 position: relative;
 overflow:hidden;
-height: 55vw;
+height: 60rem;
 display: flex;
 flex-direction: column;
 }
 
-.wavecolorbox{width: 1.5vw;
-    height: 10vw;
+.wavecolorbox{width: 1.5rem;
+    height: 10rem;
 }
 
 
-.speedbtnbox{width: 1.5vw;
-height: 10vw;
+.speedbtnbox{width: 1.5rem;
+height: 10rem;
 }
 
 .speedbtn{
 opacity: 0;
-width: 2vw;
-height: 2vw;
+width: 2rem;
+height: 2rem;
 background-color: gray;
 color: white;
-font-size: 1.5vw;
-border-radius: 0.2vw;
+font-size: 1.5rem;
+border-radius: 0.2rem;
 cursor: pointer;
 font-weight: bolder;
 animation:main .5s 0.8s ease-in normal forwards;
 text-align: center;
-margin-top: 0.5vw;
-margin-left: 2.5vw;
+margin-top: 0.5rem;
+margin-left: 2.5rem;
 }
 
 .speedbtn.control{cursor:default;}
 
 .wavecolor{
     opacity: 0;
-    width: 2vw;
-    height: 1.5vw;
-    margin-top: 0.5vw;
-    border-radius: 0.2em;
+    width: 2rem;
+    height: 1.5rem;
+    margin-top: 0.5rem;
+    border-radius: 0.2px;
     cursor: pointer;
     border: .1vw solid grey;
     animation:main .5s 0.8s ease-in normal forwards;
-    margin-left: 2.4vw;
+    margin-left: 2.4rem;
     }
 
     @keyframes main{
@@ -145,9 +146,9 @@ margin-left: 2.5vw;
 
 .title{
 opacity: 0;
-margin-top: 5vw;
-width: 100vw;
-font-size: 2vw;
+margin-top: 5rem;
+width: 100%;
+font-size: 2rem;
 white-space: nowrap;
 color: var(--main-font-color);
 font-weight: bold;
@@ -162,15 +163,15 @@ animation:title 0.5s ease-in normal forwards;
 }
 
 .name{
-    padding-top: 2vw;
+    padding-top: 2rem;
     opacity: 0;
-    width: 100vw;
+    width: 100%;
     color: rgb(107, 107, 107);
-    font-size: 1.2vw;
+    font-size: 1.2rem;
     font-weight: bold;
     white-space: nowrap;
     text-align: center;
-    padding-top: 1.5vw;
+    padding-top: 1.5rem;
     z-index: 1;
     animation:name 0.6s ease-in .3s normal forwards;
 }
@@ -182,7 +183,7 @@ animation:title 0.5s ease-in normal forwards;
 
 
 .canvas{width: 100%;
-height: 60vw;
+height: 20rem;
 background-color:rgb(209, 209, 209,0);}
 
 .pace{
