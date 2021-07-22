@@ -61,6 +61,18 @@ var endheight = PORTFOLIO.offsetHeight+careerheight+aniheight;
 
 var navbarlist = document.querySelectorAll('.navbar_list');
 
+window.addEventListener('resize',function(){
+    doc = document.documentElement,
+    docheight = Math.max(doc.offsetHeight,doc.scrollHeight),
+    doctop = Math.max(doc.offsetTop,doc.scrollTop,window.pageYOffset),
+    scrollpos = window.pageYOffset,doc.scrollTop,doc.offsetTop;
+    aniheight = animation.offsetHeight;
+    careerheight = career.offsetHeight;
+    endheight = PORTFOLIO.offsetHeight+careerheight+aniheight;
+    
+    console.log(careerheight)
+});
+
 navbarlist[0].addEventListener('click',function(){
     scrolltotop();
 });
@@ -72,21 +84,27 @@ navbarlist[1].addEventListener('click',function(){
                
             if(scrollpos < aniheight){
                     window.scrollBy(0,100); 
+                    setTimeout(() => {
+                        clearInterval(carrertop);    
+                    }, 300);
                 }else{
                     clearInterval(carrertop);
                 }
 
-        }, 15);             
+        }, 10);             
         
         const carrerbutton = setInterval(() => {           
                
             if(scrollpos > aniheight){
                     window.scrollBy(0,-100); 
+                    setTimeout(() => {
+                        clearInterval(carrertop);    
+                    }, 300);
                 }else{
                     clearInterval(carrerbutton);
                 }
 
-        }, 15);   
+        }, 10);   
         
 });
 
@@ -98,21 +116,27 @@ navbarlist[2].addEventListener('click',function(){
                
             if(scrollpos < aniheight+careerheight){
                     window.scrollBy(0,100); 
+                    setTimeout(() => {
+                        clearInterval(carrertop);    
+                    }, 300);
                 }else{
                     clearInterval(carrertop);
                 }
 
-        }, 15);             
+        }, 10);             
         
         const carrerbutton = setInterval(() => {           
                
             if(scrollpos > aniheight+careerheight){
                     window.scrollBy(0,-100); 
+                    setTimeout(() => {
+                        clearInterval(carrertop);    
+                    }, 300);
                 }else{
                     clearInterval(carrerbutton);
                 }
 
-        }, 15);   
+        }, 10);   
         
 });
 
@@ -123,9 +147,12 @@ navbarlist[3].addEventListener('click',function(){
 
             if(scrollpos < endheight){             
                 window.scrollBy(0,100);
-                }else{
-                    clearInterval(carrertop);
-                }
-        }, 15);             
+
+                setTimeout(() => {
+                    clearInterval(carrertop);    
+                }, 300);
+                
+                }          
+        }, 10);             
 
 });
