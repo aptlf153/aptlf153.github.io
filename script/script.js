@@ -77,35 +77,8 @@ navbarlist[0].addEventListener('click',function(){
     scrolltotop();
 });
 
-navbarlist[1].addEventListener('click',function(){
-    scrollpos = window.pageYOffset,doc.scrollTop,doc.offsetTop;
-
-        const carrertop = setInterval(() => {           
-               
-            if(scrollpos < aniheight){
-                    window.scrollBy(0,100); 
-                    setTimeout(() => {
-                        clearInterval(carrertop);    
-                    }, 300);
-                }else{
-                    clearInterval(carrertop);
-                }
-
-        }, 10);             
-        
-        const carrerbutton = setInterval(() => {           
-               
-            if(scrollpos > aniheight){
-                    window.scrollBy(0,-100); 
-                    setTimeout(() => {
-                        clearInterval(carrertop);    
-                    }, 300);
-                }else{
-                    clearInterval(carrerbutton);
-                }
-
-        }, 10);   
-        
+navbarlist[1].addEventListener('click',function(){                   
+    window.scrollTo({top:aniheight, left:0, behavior:'smooth'});             
 });
 
 
