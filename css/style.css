@@ -86,7 +86,7 @@ opacity: .8;
     width: 100%;
 }
 
-.animation{width: 100%;
+.animation{width: 100vw;
 background:  linear-gradient(180deg,#c0f0ff,#e3efff);
 position: relative;
 overflow:hidden;
