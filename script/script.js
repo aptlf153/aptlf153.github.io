@@ -74,7 +74,7 @@ window.addEventListener('resize',function(){
 });
 
 navbarlist[0].addEventListener('click',function(){
-    scrolltotop();
+     window.scrollTo({top:0, left:0, behavior:'smooth'});   
 });
 
 navbarlist[1].addEventListener('click',function(){                   
@@ -83,49 +83,10 @@ navbarlist[1].addEventListener('click',function(){
 
 
 navbarlist[2].addEventListener('click',function(){
-    scrollpos = window.pageYOffset,doc.scrollTop,doc.offsetTop;
-
-        const carrertop = setInterval(() => {           
-               
-            if(scrollpos < aniheight+careerheight){
-                    window.scrollBy(0,100); 
-                    setTimeout(() => {
-                        clearInterval(carrertop);    
-                    }, 300);
-                }else{
-                    clearInterval(carrertop);
-                }
-
-        }, 10);             
-        
-        const carrerbutton = setInterval(() => {           
-               
-            if(scrollpos > aniheight+careerheight){
-                    window.scrollBy(0,-100); 
-                    setTimeout(() => {
-                        clearInterval(carrertop);    
-                    }, 300);
-                }else{
-                    clearInterval(carrerbutton);
-                }
-
-        }, 10);   
-        
+  
+        window.scrollTo({top:aniheight+careerheight, left:0, behavior:'smooth'});
 });
 
 navbarlist[3].addEventListener('click',function(){
-    scrollpos = window.pageYOffset,doc.scrollTop,doc.offsetTop;
-
-        const carrertop = setInterval(() => {     
-
-            if(scrollpos < endheight){             
-                window.scrollBy(0,100);
-
-                setTimeout(() => {
-                    clearInterval(carrertop);    
-                }, 300);
-                
-                }          
-        }, 10);             
-
+   window.scrollTo({top:endheight, left:0, behavior:'smooth'});   
 });
