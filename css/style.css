@@ -95,13 +95,16 @@ display: flex;
 flex-direction: column;
 }
 
-.wavecolorbox{width: 1.5rem;
-    height: 10rem;
+.wavecolorbox{
+width: 1.5rem;
+height: 10rem;
+z-index: 10;
 }
 
 
 .speedbtnbox{width: 1.5rem;
 height: 10rem;
+ z-index: 10;
 }
 
 .speedbtn{
@@ -184,7 +187,11 @@ animation:title 0.5s ease-in normal forwards;
 
 .canvas{width: 100%;
 height: 20vw;
-background-color:rgb(209, 209, 209,0);}
+background-color:rgb(209, 209, 209,0);
+position: absolute;
+bottom: 0;
+z-index: 1;
+}
 
 .pace{
     width: 50%;
