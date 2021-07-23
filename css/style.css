@@ -90,7 +90,7 @@ opacity: .8;
 background:  linear-gradient(180deg,#c0f0ff,#e3efff);
 position: relative;
 overflow:hidden;
-height: 60rem;
+height: 60vw;
 display: flex;
 flex-direction: column;
 }
