@@ -183,7 +183,7 @@ animation:title 0.5s ease-in normal forwards;
 
 
 .canvas{width: 100%;
-height: 20rem;
+height: 20vw;
 background-color:rgb(209, 209, 209,0);}
 
 .pace{
