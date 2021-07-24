@@ -44,7 +44,7 @@ li{list-style: none;}
 top: 0;
 background-color: white;
 position: fixed;
-z-index: 9999;
+z-index: 900;
 width: 100%;
 height: 5vw;
 box-shadow: 0 0.1px 0 0 gray;
@@ -59,6 +59,8 @@ opacity: .8;
     width: 80%;
     justify-content: space-around;
 }
+
+.navbar p{display: none;}
 
 .navbar_list{font-size: 2vw;
             list-style:none;
@@ -84,6 +86,44 @@ opacity: .8;
 
 .navbar_list:hover::before{
     width: 100%;
+}
+
+.shade{width: 100%;
+height: 100%;
+background-color: black;
+position: fixed;
+z-index: 999;
+opacity: .3;
+display: none; 
+}
+
+.mobil_navbar_menu{
+display: block;    
+background-color: beige;
+    position: fixed;
+width: 45%;
+height: 100%;
+z-index: 1000;
+right: 0;
+}
+
+.mobil_navbar_menu .navbar_list{
+text-align: left;
+font-size: 3vw;
+padding: 20px 40px;
+}
+
+.mobil_navbar_menu p {
+    width: 100%;
+text-align: center;
+font-size: 4vw;
+padding: 20px 0;
+color: rgb(95, 95, 95);
+font-weight: 500;
+}
+
+.mobil_navbar_menu .navbar_list:hover::before{
+    width: 0%;
 }
 
 .animation{width: 100vw;
@@ -428,3 +468,35 @@ footer h3{font-size: 1.2vw;}
     color: rgb(31, 31, 31);}
 
     .About ul li{margin-bottom: 1.5vw;}
+
+
+    /*모바일 반응혇*/
+    @media all and (min-width:480px) and (max-width:767px) {
+    
+        .navbar{opacity: 1;
+            align-items: center;
+        }
+        
+        .navbar p{display:block;
+        font-size: 2.5vw;
+        width: 100%;
+        text-align: right;
+        padding: 0 20px;
+        font-weight: bold;
+        }
+
+        .navbar_menu{
+            display: none;
+        }
+
+            .speedbtnbox{
+                display: none;
+            }
+        
+            .wavecolorbox{
+                display: none;
+                position: relative;
+            }
+        
+     }
+    
