@@ -471,7 +471,7 @@ footer h3{font-size: 1.2vw;}
 
 
     /*모바일 반응혇*/
-    @media all and (max-width:767px) {
+   @media all and (max-width:479px){
     
         .navbar{opacity: 1;
             align-items: center;
