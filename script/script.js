@@ -71,6 +71,7 @@ window.addEventListener('resize',function(){
     endheight = PORTFOLIO.offsetHeight+careerheight+aniheight;
 });
 
+
 navbarlist[0].addEventListener('click',function(){
      window.scrollTo({top:0, left:0, behavior:'smooth'});   
 });
@@ -84,7 +85,7 @@ navbarlist[2].addEventListener('click',function(){
 });
 
 navbarlist[3].addEventListener('click',function(){
-   window.scrollTo({top:endheight, left:0, behavior:'smooth'});   
+   window.scrollTo({top:docheight, left:0, behavior:'smooth'});   
 });
 
 navbarlist[5].addEventListener('click',function(){
@@ -103,7 +104,7 @@ navbarlist[7].addEventListener('click',function(){
 });
 
 navbarlist[8].addEventListener('click',function(){
-  window.scrollTo({top:endheight, left:0, behavior:'auto'});  
+  window.scrollTo({top:docheight, left:0, behavior:'auto'});  
   mobilMeunClose(); 
 });
 
@@ -115,12 +116,12 @@ const mobil_navbar_menu = document.querySelector('.mobil_navbar_menu');
 
 mobil.addEventListener('click',function(){
     shade.style.display = 'block';
-    mobil_navbar_menu.style.display = 'block';
+    mobil_navbar_menu.style.right = '0'+'%';
 });
 
 function mobilMeunClose(){
     shade.style.display = 'none';
-    mobil_navbar_menu.style.display = 'none';
+    mobil_navbar_menu.style.right = -'45'+'%';
 };
 
 navbarlist[4].addEventListener('click',function(){
@@ -130,3 +131,94 @@ navbarlist[4].addEventListener('click',function(){
  shade.addEventListener('click',function(){
     mobilMeunClose();
  });
+
+
+ // 프로필 
+
+ const profille = document.querySelector('.profille');
+const infobox = document.querySelector('.infobox');
+
+ window.addEventListener('scroll',function(){
+    if(scrollpos > animation.offsetHeight/2){
+        profille.classList.add('profillevisible');
+        infobox.classList.add('infoboxvisible');
+     }
+ });
+
+ window.addEventListener('resize',function(){
+     if(window.innerHeight > career.offsetTop+(animation.offsetHeight/2)){
+        profille.classList.add('profillevisible');
+        infobox.classList.add('infoboxvisible');
+     }
+ })
+
+ if(window.innerHeight > career.offsetTop+(animation.offsetHeight/2)){
+    profille.classList.add('profillevisible');
+    infobox.classList.add('infoboxvisible');
+ }
+
+ //포폴
+ const project = document.querySelectorAll('.project');
+ const  acodienbox = document.querySelector('.acodien_box');
+
+ window.addEventListener('scroll',function(){
+    if(scrollpos > career.offsetTop+(career.offsetHeight/3)){
+        PORTFOLIOevnt();
+     }
+ });
+
+ window.addEventListener('resize',function(){
+     if(window.innerHeight > PORTFOLIO.offsetTop*0.8){
+        PORTFOLIOevnt();
+     }
+ })
+
+ if(window.innerHeight > PORTFOLIO.offsetTop*0.8){
+    PORTFOLIOevnt();
+ }
+
+
+function PORTFOLIOevnt(){
+    PORTFOLIO.classList.add('PORTFOLIOvisible');   
+    project[0].classList.add('projectvisible');
+    this.setTimeout(function(){project[1].classList.add('projectvisible'); },50)
+    this.setTimeout(function(){project[2].classList.add('projectvisible'); },100)
+    this.setTimeout(function(){project[3].classList.add('projectvisible'); },150)
+    this.setTimeout(function(){project[4].classList.add('projectvisible'); },200)
+    this.setTimeout(function(){project[5].classList.add('projectvisible'); },250)
+}
+
+window.addEventListener('scroll',function(){
+    if(scrollpos > PORTFOLIO.offsetTop+(PORTFOLIO.offsetHeight/3)){
+        acodienbox.classList.add('acodien_boxvisible');
+     }
+ });
+
+ window.addEventListener('resize',function(){
+    if(window.innerHeight > acodienbox.offsetTop*0.5){
+        acodienbox.classList.add('acodien_boxvisible');
+    }
+})
+
+if(window.innerHeight > acodienbox.offsetTop*0.5){
+    acodienbox.classList.add('acodien_boxvisible');
+}
+
+const footer = document.querySelector('footer');
+
+window.addEventListener('scroll',function(){
+    if(scrollpos > PORTFOLIO.offsetTop+(PORTFOLIO.offsetHeight/1.5)){
+        footer.classList.add('footervlsible');
+     }
+ });
+
+ 
+ window.addEventListener('resize',function(){
+    if(window.innerHeight > acodienbox.offsetTop*0.4){
+        footer.classList.add('footervlsible');
+    }
+})
+
+if(window.innerHeight > acodienbox.offsetTop*0.4){
+    footer.classList.add('footervlsible');
+}

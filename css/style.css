@@ -104,7 +104,8 @@ background-color: beige;
 width: 45%;
 height: 100%;
 z-index: 1000;
-right: 0;
+right: -45%;
+transition: 0.3s;
 }
 
 .mobil_navbar_menu .navbar_list{
@@ -126,6 +127,8 @@ font-weight: 500;
     width: 0%;
 }
 
+.mobil_close img{float: right;}
+
 .animation{width: 100vw;
 background:  linear-gradient(180deg,#c0f0ff,#e3efff);
 position: relative;
@@ -136,24 +139,24 @@ flex-direction: column;
 }
 
 .wavecolorbox{
-width: 1.5rem;
-height: 10rem;
+width: 1.5vw;
+height: 10vw;
 z-index: 10;
 }
 
 
 .speedbtnbox{width: 1.5rem;
-height: 10rem;
+height: 10vw;
  z-index: 10;
 }
 
 .speedbtn{
 opacity: 0;
-width: 2rem;
-height: 2rem;
+width: 1.5em;
+height: 1.5em;
 background-color: gray;
 color: white;
-font-size: 1.5rem;
+font-size: 1.5vw;
 border-radius: 0.2rem;
 cursor: pointer;
 font-weight: bolder;
@@ -167,14 +170,14 @@ margin-left: 2.5rem;
 
 .wavecolor{
     opacity: 0;
-    width: 2rem;
-    height: 1.5rem;
+    width: 2vw;
+    height: 1.5vw;
     margin-top: 0.5rem;
     border-radius: 0.2px;
     cursor: pointer;
     border: .1vw solid grey;
     animation:main .5s 0.8s ease-in normal forwards;
-    margin-left: 2.4rem;
+    margin-left: 2.5rem;
     }
 
     @keyframes main{
@@ -210,7 +213,7 @@ animation:title 0.5s ease-in normal forwards;
     opacity: 0;
     width: 100%;
     color: rgb(107, 107, 107);
-    font-size: 1.2vw;
+    font-size: 1.8vw;
     font-weight: bold;
     white-space: nowrap;
     text-align: center;
@@ -261,9 +264,41 @@ position: relative;
 margin-top: 3vw;
 }
 
-.profille{width: 60vw;
+.infobox{width: 40vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    opacity: 0;
+transition: 0.5s;
+margin-top: 10%;
+    }
+
+.infoboxvisible{width: 40vw;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-top: 3vw;
+        opacity: 1;
+        }
+
+.profille{
+width: 60vw;
 height: 100vw;
+opacity: 0;
+transition: 0.5s;
+margin-top: 10%;
 }
+
+.profillevisible{
+    width: 60vw;
+    height: 100vw;
+    opacity: 1;
+    margin-top: 0%;
+    }
+
+
 
 .profilleboxa{width: 59vw;
 height: 20vw;
@@ -318,14 +353,13 @@ height: 40vw;}
 width: 30vw;
 height: 30vw;
 border-radius: 50%;
-background-color:#FF5A5A;
 position: absolute;
 left: 50%;
 transform: translateX(-50%);
 border: .3vw solid gray;
+background-image:url('../img/Dummy.png');
+background-size: cover;
 }
-
-
 
 
 
@@ -335,6 +369,17 @@ border: .3vw solid gray;
 width: 100vw;
 height: 50vw;
 padding:6vw 0;
+opacity: 0;
+transition: 0.5s;
+margin-top: 10%;
+}
+
+.PORTFOLIOvisible{
+width: 100vw;
+height: 50vw;
+padding:6vw 0;
+opacity: 1;
+margin-top: 0%;
 }
 
 .PORTFOLIO p{
@@ -354,27 +399,56 @@ margin-bottom: 1vw;
     justify-content: space-around;
 }
 
-.PORTFOLIO ul li{
+.project{
     list-style: none;
     width: 32vw;
     height: 22vw;
     background-color: black;
     display: block;
+    opacity: 0;
+transition: 0.5s;
+margin-top: 10%;  
+display: flex;
+
 }
+
+.projectvisible{
+    list-style: none;
+    width: 32vw;
+    height: 18vw;
+    display: block;
+    opacity: 1;
+    margin-top: 0%;
+    border: 2px solid gray;
+}
+
 
 /*아코디언*/
 
 
-.acodien_box{width: 100vw;
+.acodien_box{
+width: 100vw;
 height:auto;
 display: flex;
 flex-direction: column;
 align-items: center;
 list-style: none;
-margin: 0 auto;
-border-top:0.1vw solid #313131;
+border-top:2px solid #313131;
+opacity: 0;
+transition: 0.5s;
+margin-top: 20%;  
 }
 
+.acodien_boxvisible{width: 100vw;
+    height:auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    border-top:3px solid #313131;
+    opacity: 1;
+    margin-top: 5%;  
+    }
 
 .acodienQandA{width: 100vw;
     cursor: pointer;
@@ -404,7 +478,7 @@ transition: 0.3s;
 }
 
 .acodoenA{
-    display: none;
+    overflow: hidden;
     transition: 0.3s;
     width: 100vw;
     height: 0;
@@ -413,16 +487,39 @@ transition: 0.3s;
 
 
 .select .acodoenA{
-    display:inline-block;
     width: 100vw;
-    height: auto ;
+    height: 20vw ;
     color: #2c2c2c;
     font-size: 1.5vw;
-    border-bottom: 0.1vw solid gray;
+    border-bottom: 0.1px solid gray;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1vw 0 1vw 0;
+    padding: 5px 0;
+}
+
+.select:nth-child(2) .acodoenA{
+    width: 100vw;
+    height: 10vw ;
+    color: #2c2c2c;
+    font-size: 1.5vw;
+    border-bottom: 0.1px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.select:nth-child(3) .acodoenA{
+    width: 100vw;
+    height: 15vw ;
+    color: #2c2c2c;
+    font-size: 1.5vw;
+    border-bottom: 0.1px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
 }
 
 footer{width: 100vw;
@@ -433,7 +530,22 @@ justify-content: space-around;
 flex-wrap: wrap;
 border-top: 0.1vw solid #222222;
 padding-top: 4vw;
+opacity: 0;
+transition: 0.5s;
+margin-top: 20%;  
 }
+
+.footervlsible{width: 100vw;
+    height: 5vw;
+    margin-top: 10vw;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-top: 0.1vw solid #222222;
+    padding-top: 4vw;
+    opacity: 1;
+    margin-top: 10%;  
+    }
 
 footer div{width: 30vw;
 height: 10vw;
@@ -471,10 +583,11 @@ footer h3{font-size: 1.2vw;}
 
 
     /*모바일 반응혇*/
-   @media all and (max-width:479px){
+   @media all and (max-width:767px){
     
         .navbar{opacity: 1;
             align-items: center;
+            height: 8vw;
         }
         
         .navbar p{display:block;
