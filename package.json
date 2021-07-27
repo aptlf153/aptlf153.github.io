@@ -1,0 +1,24 @@
+{
+  "name": "aptlf153.github.io",
+  "version": "1.0.0",
+  "description": "A simple and modern portfolio template that is lightweight, mobile responsive and looks modern.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aptlf153/aptlf153.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aptlf153/aptlf153.github.io/issues"
+  },
+  "homepage": "https://github.com/aptlf153/aptlf153.github.io#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^4.1.3"
+  }
+}
