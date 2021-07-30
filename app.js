@@ -4,6 +4,7 @@ const app = express();
 const path = require("path");
 const server = http.createServer(app);
 const socketIO = require("socket.io")
+const moment = require('moment')
 
 const io = socketIO(server);
 
@@ -12,7 +13,11 @@ io.on("connection", (socket) => {
         
         console.log(data)
 
-     io.emit("chatting",data)
+     io.emit("chatting",{
+        name:data.name,
+        msg:data.msg,
+         time:moment(new Date()).format('hh:mm A')
+     })
     })
 })
 

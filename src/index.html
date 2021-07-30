@@ -1,28 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>chat</title>
+   
+    <link href="./chat.css" rel="stylesheet">
 </head>
+
 <body>
+
     <div class="wrapper">
         <div class="user-container">
-            대화명:<input type="text" id="nickname">
+                대화명:<input type="text" id="nickname">
         </div>
-        <div class="display-container">
-            <ul class="chatting_list"></ul>
-        </div>
-        <div class="input-container">
-            <input type="text" class="chatting-input">
-            <button class="chat-btn">전송임</button>
-        </div>
-
+     
+    <div class="display-container">
+        <ul class="chatting_list">
+        </ul>
+    </div>
+    
+    <div class="input-container">
+      <span>
+        <input type="text" class="chatting-input">
+        <button class="chat-btn">send</button>
+      </span>
+    
     </div>
 
-
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="js/chat.js"></script>
+   </div>     
+    
+    
 </body>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/chat.js"></script>
+
 </html>
