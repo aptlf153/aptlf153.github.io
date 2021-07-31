@@ -62,7 +62,8 @@ opacity: .8;
 
 .navbar p{display: none;}
 
-.navbar_list{font-size: 2vw;
+.navbar_list{
+            font-size: 2vw;
             list-style:none;
             white-space: nowrap;
             color: var(--main-font-color);
@@ -72,16 +73,7 @@ opacity: .8;
         }
 
 .navbar_list::before{
-    content: "";
-    border-bottom: 0.35em solid #00C3FF;
-    height: 100%;
-    width: 0;
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    transition: 0.3s;
+
 }        
 
 .navbar_list:hover::before{
