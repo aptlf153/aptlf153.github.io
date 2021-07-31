@@ -24,7 +24,9 @@ for(var i=0;i<pic.length;i++){
 };
 
 //윈도우에서 마우스 휠 이벤트 진행시 li 모션 
+
 window.addEventListener('mousewheel',visible)
+
 function visible(e){
     
     for(var p=0;p<pic.length;p++){
@@ -97,10 +99,17 @@ function addpic(){
             pic[i].style.marginRight = i*1 + 'vw';
             pic[i].style.marginTop = i*1 + 'vw';
         };
-
     };
 
+    var bigshow = document.querySelector('.bigshow');
+    if ( bigshow.hasChildNodes() ) {
+        bigshow.removeChild( bigshow.childNodes[0] );
+        }   
+
+        visible();
 };
+
+var showli = document.querySelector('li');
 
 downbtn.addEventListener('click',removepic)
 
@@ -120,5 +129,12 @@ function removepic(){
     };
 
     };
+
+    var bigshow = document.querySelector('.bigshow');
+    if ( bigshow.hasChildNodes() ) {
+        bigshow.removeChild( bigshow.childNodes[0] );
+        }   
+
+        visible();
 
 };
